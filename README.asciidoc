@@ -1,5 +1,9 @@
 = gentoo-overlay
 
+== links
+
+link:http://devmanual.gentoo.org/index.html[Gentoo Development Guide: Master Index]
+
 == commands
 
 ----
