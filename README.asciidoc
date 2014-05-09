@@ -1,0 +1,11 @@
+= gentoo-overlay
+
+== commands
+
+----
+git clone https://github.com/aucampia/gentoo-overlay.git
+git add
+git commit -a 
+git push
+git pull
+----
