@@ -1,4 +1,4 @@
-= gentoo-overlay
+= link:https://github.com/aucampia/gentoo-overlay[Iwan Aucamp's Gentoo Overlay]
 
 == links
 
