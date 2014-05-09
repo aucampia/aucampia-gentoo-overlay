@@ -1,0 +1,9 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+# Keep them sorted
+
+#3dfx - Enable support for Voodoo chipsets, also called as 3DFX and TDFX
+#3dnow - Use the 3DNow! instruction set
+#3dnowext - Use the Enhanced 3DNow! instruction set

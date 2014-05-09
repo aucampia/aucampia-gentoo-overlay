@@ -1,16 +1,24 @@
 = link:https://github.com/aucampia/gentoo-overlay[Iwan Aucamp's Gentoo Overlay]
 
-== links
+== Info
+
+git-https:: link:https://github.com/aucampia/gentoo-overlay.git
+git-git:: link:git:://github.com/aucampia/gentoo-overlay.git
+
+== Links
 
 * link:http://devmanual.gentoo.org/[Gentoo Development Guide]
 ** link:http://devmanual.gentoo.org/general-concepts/overlay/index.html[Overlay]
 * link:https://wiki.gentoo.org/wiki/Main_Page[Gentoo Wiki]
-** link:https://wiki.gentoo.org/wiki/Overlay[Gentoo Wiki: Overlay]
+** link:https://wiki.gentoo.org/wiki/Overlay[Overlay]
+** link:https://wiki.gentoo.org/wiki/Layman[Layman]
 * link:https://www.gentoo.org/proj/en/overlays/[Gentoo Overlay Team]
 ** link:https://www.gentoo.org/proj/en/overlays/devguide.xml[Developers' Guide]
 ** link:https://www.gentoo.org/proj/en/overlays/userguide.xml[Users' Guide]
+* link:http://sourceforge.net/projects/layman/[Layman @ SourceForge]
+** link:http://layman.sourceforge.net/[Site]
 
-== commands
+== Usefull Commands
 
 ----
 git clone https://github.com/aucampia/gentoo-overlay.git
@@ -19,3 +27,8 @@ git commit -a
 git push
 git pull
 ----
+
+== Examples
+
+* link:https://github.com/psomas/synnefo-overlay[Gentoo ebuild overlay for Synnefo]
+* link:https://github.com/nutztherookie/wacfg-overlay[wacfg-overlay]
