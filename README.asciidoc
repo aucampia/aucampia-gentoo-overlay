@@ -35,13 +35,3 @@ git pull
 * link:https://github.com/psomas/synnefo-overlay[Gentoo ebuild overlay for Synnefo]
 * link:https://github.com/nutztherookie/wacfg-overlay[wacfg-overlay]
 
-== Test 
-
-. Test
-. Broken
-. List
-
-* Does
-* This
-* Start
-* New list ?
