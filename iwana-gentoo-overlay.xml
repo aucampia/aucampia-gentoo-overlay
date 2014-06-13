@@ -8,9 +8,9 @@
 			<name>Iwan Aucamp</name>
 			<email>aucampia@gmail.com</email>
 		</owner>
-		<source type="git">https://github.com/aucampia/aucampia-gentoo-overlay.git</source>
 		<source type="git">git:://github.com/aucampia/aucampia-gentoo-overlay.git</source>
-		<source type="git">git+ssh://github.com/aucampia/aucampia-gentoo-overlay.git</source>
+		<!--source type="git">https://github.com/aucampia/aucampia-gentoo-overlay.git</source-->
+		<!--source type="git">git+ssh://github.com/aucampia/aucampia-gentoo-overlay.git</source-->
 		<!--
 		<feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=atom</feed>
 		<feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=rss</feed>
