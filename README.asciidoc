@@ -25,7 +25,7 @@ emerge --noreplace app-portage/layman
 +
 ----
 # without uri in layman.cfg
-layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml -L
+layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/aucampia-gentoo-overlay.xml -L
 
 # with uri in layman.cfg
 layman -L
@@ -35,7 +35,7 @@ layman -L
 +
 ----
 # without uri in layman.cfg
-layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml -a aucampia-gentoo-overlay
+layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/aucampia-gentoo-overlay.xml -a aucampia-gentoo-overlay
 
 # with uri in layman.cfg
 layman -a aucampia-gentoo-overlay
@@ -45,7 +45,7 @@ layman -a aucampia-gentoo-overlay
 +
 ----
 # without uri in layman.cfg
-layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml -s aucampia-gentoo-overlay
+layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/aucampia-gentoo-overlay.xml -s aucampia-gentoo-overlay
 
 # with uri in layman.cfg
 layman -s aucampia-gentoo-overlay
@@ -58,7 +58,7 @@ WARNING: Use with care - might be unsafe
 ----
 sed \
   -i.`date +%Y%m%d%H%M%S`.bak \
-  '/^[[:blank:]]*overlays[[:blank:]]*:.*$/a\            https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml' /etc/layman/layman.cfg
+  '/^[[:blank:]]*overlays[[:blank:]]*:.*$/a\            https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/aucampia-gentoo-overlay.xml' /etc/layman/layman.cfg
 ----
 
 * Permanently Add overlay to ++layman.cfg++ (manually):
@@ -88,7 +88,7 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
  #            file:///var/lib/layman/my-list.xml
  
  overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
-+            https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml
++            https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/aucampia-gentoo-overlay.xml
  
  #-----------------------------------------------------------
  # The directory to scan for xml overlay definition files to include
