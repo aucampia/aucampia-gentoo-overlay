@@ -1,0 +1,32 @@
+= link:https://github.com/aucampia/aucampia-gentoo-overlay/dev-java/maven-bin[aucampia-gentoo-overlay/dev-java/maven-bin]
+
+== Info
+
+== News
+
+== Links
+
+* link:http://www.gentoo.org/proj/en/java/[gentoo.org / The Java Project]
+** link:http://www.gentoo.org/proj/en/java/java-devel.xml[Gentoo Java Packaging Guide]
+
+== Notes
+
+* link:http://maven.apache.org/[]
+
+* link:http://git.apache.org/maven.git/[]
+* link:git://git.apache.org/maven.git[]
+
+* link:http://apache.is.co.za/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz[]
+* link:http://apache.is.co.za/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.tar.gz[]
+
+----
+wget http://apache.is.co.za/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz
+wget http://apache.is.co.za/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.tar.gz
+
+gtar -zxvf apache-maven-3.1.1-bin.tar.gz
+gtar -zxvf apache-maven-3.2.1-bin.tar.gz
+
+diff <(find apache-maven-3.1.1/lib/ -name '*.jar' -printf '%P\n' | sort) <(find apache-maven-3.2.1/lib/ -name '*.jar' -printf '%P\n' | sort)
+diff -u <(find apache-maven-3.1.1/lib/ -name '*.jar' -printf '%P\n' | sort) <(find apache-maven-3.2.1/lib/ -name '*.jar' -printf '%P\n' | sort)
+
+----
