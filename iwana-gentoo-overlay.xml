@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
-<repositories version="1.0" xmlns="">
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
 	<repo priority="50" quality="experimental" status="unofficial">
-		<name>aucampia-gentoo-overlay.xml</name>
+		<name>aucampia-gentoo-overlay</name>
 		<description>Iwan Aucamp's Gentoo Overlay</description>
 		<homepage>https://github.com/aucampia/aucampia-gentoo-overlay</homepage>
 		<owner>
@@ -11,8 +12,8 @@
 		<source type="git">git:://github.com/aucampia/aucampia-gentoo-overlay.git</source>
 		<!--source type="git">https://github.com/aucampia/aucampia-gentoo-overlay.git</source-->
 		<!--source type="git">git+ssh://github.com/aucampia/aucampia-gentoo-overlay.git</source-->
+		<feed>https://github.com/aucampia/aucampia-gentoo-overlay/commits/master.atom</feed>
 		<!--
-		<feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=atom</feed>
 		<feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=rss</feed>
 		-->
 	</repo>
