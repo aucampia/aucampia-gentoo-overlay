@@ -3,9 +3,9 @@
 == Info
 
 git sources::
-https::: link:https://github.com/aucampia/gentoo-overlay.git
-git::: link:git://github.com/aucampia/gentoo-overlay.git
-git+ssh::: link:git+ssh://github.com/aucampia/gentoo-overlay.git
+https::: link:https://github.com/aucampia/gentoo-overlay.git[]
+git::: link:git://github.com/aucampia/gentoo-overlay.git[]
+git+ssh::: link:git+ssh://github.com/aucampia/gentoo-overlay.git[]
 
 == Links
 
