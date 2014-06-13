@@ -1,19 +1,27 @@
-= link:https://github.com/aucampia/gentoo-overlay[Iwan Aucamp's Gentoo Overlay]
+= link:https://github.com/aucampia/aucampia-gentoo-overlay[Iwan Aucamp's Gentoo Overlay]
 
 == Info
 
+repo_name:: +aucampia-gentoo-overlay+
+
 git sources::
-https::: link:https://github.com/aucampia/gentoo-overlay.git[]
-git::: link:git:://github.com/aucampia/gentoo-overlay.git[]
-git+ssh::: link:git+ssh://github.com/aucampia/gentoo-overlay.git[]
+https::: link:https://github.com/aucampia/aucampia-gentoo-overlay.git[]
+git::: link:git:://github.com/aucampia/aucampia-gentoo-overlay.git[]
+git+ssh::: link:git+ssh://github.com/aucampia/aucampia-gentoo-overlay.git[]
+
+== News
 
 == Links
 
 * link:http://devmanual.gentoo.org/[Gentoo Development Guide]
-** link:http://devmanual.gentoo.org/general-concepts/overlay/index.html[Overlay]
+** link:http://devmanual.gentoo.org/general-concepts/index.html[General Concepts] / link:http://devmanual.gentoo.org/general-concepts/overlay/index.html[Overlay]
+** link:http://devmanual.gentoo.org/ebuild-writing/index.html[Ebuild Writing] / link:http://devmanual.gentoo.org/ebuild-writing/variables/index.html[Variables]
 * link:https://wiki.gentoo.org/wiki/Main_Page[Gentoo Wiki]
 ** link:https://wiki.gentoo.org/wiki/Overlay[Overlay]
 ** link:https://wiki.gentoo.org/wiki/Layman[Layman]
+** link:https://wiki.gentoo.org/wiki/Repository_format[Repository format]
+*** link:https://wiki.gentoo.org/wiki/Repository_format/metadata/layout.conf[metadata/layout.conf]
+*** link:https://wiki.gentoo.org/wiki/Repository_format/profiles/repo_name[profiles/repo_name]
 * link:https://www.gentoo.org/proj/en/overlays/[Gentoo Overlay Team]
 ** link:https://www.gentoo.org/proj/en/overlays/devguide.xml[Developers' Guide]
 ** link:https://www.gentoo.org/proj/en/overlays/userguide.xml[Users' Guide]
@@ -23,11 +31,19 @@ git+ssh::: link:git+ssh://github.com/aucampia/gentoo-overlay.git[]
 == Usefull Commands
 
 ----
-git clone https://github.com/aucampia/gentoo-overlay.git
+#git clone https://github.com/aucampia/gentoo-overlay.git
+git clone https://github.com/aucampia/aucampia-gentoo-overlay.git
 git add
 git commit -a 
 git push
 git pull
+
+## See origin details:
+git remote show origin
+
+## Change origin:
+git remote set-url origin git@github.com:aucampia/aucampia-gentoo-overlay.git
+git remote set-url origin https://github.com/aucampia/aucampia-gentoo-overlay.git
 ----
 
 == Examples
@@ -35,3 +51,12 @@ git pull
 * link:https://github.com/psomas/synnefo-overlay[Gentoo ebuild overlay for Synnefo]
 * link:https://github.com/nutztherookie/wacfg-overlay[wacfg-overlay]
 
+== Notes
+
+----
+wget http://www.gentoo.org/proj/en/overlays/repositories.xml
+sed -n 's/^.*<source[^>]\+>.*\(github.com\/.*\).git<\/source>.*$/\1/gp' repositories.xml | sort | uniq
+----
+
+* link:http://dev.gentoo.org/~zmedico/portage/doc/man/portage.5.html[]
+* link:
