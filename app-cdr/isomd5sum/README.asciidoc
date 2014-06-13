@@ -1,0 +1,9 @@
+
+https://git.fedorahosted.org/git/isomd5sum.git
+https://apps.fedoraproject.org/packages/isomd5sum
+https://admin.fedoraproject.org/pkgdb/package/isomd5sum/
+https://raw.githubusercontent.com/Sabayon/for-gentoo/master/app-cdr/isomd5sum/isomd5sum-1.0.12.ebuild
+https://github.com/Sabayon/for-gentoo/blob/master/app-cdr/isomd5sum/isomd5sum-1.0.12.ebuild
+
+/usr/portage/eclass/python-r1.eclass
+/usr/portage/dev-libs/libxml2/libxml2-2.9.1-r4.ebuild
