@@ -7,3 +7,7 @@ https://github.com/Sabayon/for-gentoo/blob/master/app-cdr/isomd5sum/isomd5sum-1.
 
 /usr/portage/eclass/python-r1.eclass
 /usr/portage/dev-libs/libxml2/libxml2-2.9.1-r4.ebuild
+
+https://www.gentoo.org/proj/en/Python/python-r1/user-guide.xml
+
+echo 'app-cdr/isomd5sum -python_targets_python2_6' >> /etc/portage/profile/package.use.mask
