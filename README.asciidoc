@@ -11,6 +11,89 @@ git+ssh::: link:git+ssh://github.com/aucampia/aucampia-gentoo-overlay.git[]
 
 == News
 
+== Instructions
+
+NOTE: These commands require super user permissions (i.e. use +sudo+)
+
+* Install layman
++
+----
+emerge --noreplace app-portage/layman
+----
+
+* List overlays
++
+----
+# without uri in layman.cfg
+layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml -L
+
+# with uri in layman.cfg
+layman -L
+----
+
+* Add Overlay through layman
++
+----
+# without uri in layman.cfg
+layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml -a aucampia-gentoo-overlay
+
+# with uri in layman.cfg
+layman -a aucampia-gentoo-overlay
+----
+
+* Update overlay
++
+----
+# without uri in layman.cfg
+layman -o https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml -s aucampia-gentoo-overlay
+
+# with uri in layman.cfg
+layman -s aucampia-gentoo-overlay
+----
+
+* Permanently Add overlay to ++layman.cfg++:
++
+WARNING: Use with care - might be unsafe
++
+----
+sed \
+  -i.`date +%Y%m%d%H%M%S`.bak \
+  '/^[[:blank:]]*overlays[[:blank:]]*:.*$/a\            https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml' /etc/layman/layman.cfg
+----
+
+* Permanently Add overlay to ++layman.cfg++ (manually):
+** Open file in your editor
++
+----
+$EDITOR /etc/layman/layman.cfg
+----
+
+** Locate +overlays+ section:
++
+----
+...
+
+overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
+
+...
+----
+
+** Add url to +overlays+ section:
++
+----
+diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
+--- /etc/layman/layman.cfg.20140613162703.bak	2014-06-13 16:26:58.563246255 +0200
++++ /etc/layman/layman.cfg	2014-06-13 16:27:03.073224185 +0200
+@@ -38,6 +38,7 @@
+ #            file:///var/lib/layman/my-list.xml
+ 
+ overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
++            https://raw.githubusercontent.com/aucampia/aucampia-gentoo-overlay/master/iwana-gentoo-overlay.xml
+ 
+ #-----------------------------------------------------------
+ # The directory to scan for xml overlay definition files to include
+----
+
 == Links
 
 * link:http://devmanual.gentoo.org/[Gentoo Development Guide]
