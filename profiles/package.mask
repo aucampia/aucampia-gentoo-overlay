@@ -29,4 +29,6 @@
 ## # funny. (bug #987654)
 ## app-misc/some-package
 
-#--- END OF EXAMPLES ---
+#--- END OF EXAMPLES --
+
+# */*::aucampia-gentoo-overlay
