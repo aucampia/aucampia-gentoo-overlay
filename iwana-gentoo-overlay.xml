@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
 <repositories version="1.0" xmlns="">
 	<repo priority="50" quality="experimental" status="unofficial">
-		<name>iwana-gentoo-overlay.xml</name>
+		<name>aucampia-gentoo-overlay.xml</name>
 		<description>Iwan Aucamp's Gentoo Overlay</description>
-		<homepage>https://github.com/aucampia/gentoo-overlay</homepage>
+		<homepage>https://github.com/aucampia/aucampia-gentoo-overlay</homepage>
 		<owner>
 			<name>Iwan Aucamp</name>
 			<email>aucampia@gmail.com</email>
 		</owner>
-		<source type="git">https://github.com/aucampia/gentoo-overlay.git</source>
-		<source type="git">git:://github.com/aucampia/gentoo-overlay.git</source>
-		<source type="git">git+ssh://github.com/aucampia/gentoo-overlay.git</source>
+		<source type="git">https://github.com/aucampia/aucampia-gentoo-overlay.git</source>
+		<source type="git">git:://github.com/aucampia/aucampia-gentoo-overlay.git</source>
+		<source type="git">git+ssh://github.com/aucampia/aucampia-gentoo-overlay.git</source>
 		<!--
 		<feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=atom</feed>
 		<feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=rss</feed>
