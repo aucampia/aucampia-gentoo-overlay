@@ -11,6 +11,9 @@
 
 == Notes
 
+* /usr/portage/eclass/java-pkg-2.eclass
+* /usr/portage/eclass/java-utils-2.eclass
+
 * link:http://maven.apache.org/[]
 
 * link:http://git.apache.org/maven.git/[]
@@ -26,7 +29,12 @@ wget http://apache.is.co.za/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.
 gtar -zxvf apache-maven-3.1.1-bin.tar.gz
 gtar -zxvf apache-maven-3.2.1-bin.tar.gz
 
+view -O2 <(find apache-maven-3.1.1/lib/ -name '*.jar' -printf '%p\n' | sort) <(find apache-maven-3.2.1/lib/ -name '*.jar' -printf '%p\n' | sort)
+vimdiff <(find apache-maven-3.1.1/lib/ -name '*.jar' -printf '%P\n' | sort) <(find apache-maven-3.2.1/lib/ -name '*.jar' -printf '%P\n' | sort)
 diff <(find apache-maven-3.1.1/lib/ -name '*.jar' -printf '%P\n' | sort) <(find apache-maven-3.2.1/lib/ -name '*.jar' -printf '%P\n' | sort)
 diff -u <(find apache-maven-3.1.1/lib/ -name '*.jar' -printf '%P\n' | sort) <(find apache-maven-3.2.1/lib/ -name '*.jar' -printf '%P\n' | sort)
-
 ----
+
+* Why :
+** aopalliance-1
+** avalon-framework-4.1
