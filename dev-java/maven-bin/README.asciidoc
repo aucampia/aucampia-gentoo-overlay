@@ -35,6 +35,16 @@ diff <(find apache-maven-3.1.1/lib/ -name '*.jar' -printf '%P\n' | sort) <(find 
 diff -u <(find apache-maven-3.1.1/lib/ -name '*.jar' -printf '%P\n' | sort) <(find apache-maven-3.2.1/lib/ -name '*.jar' -printf '%P\n' | sort)
 ----
 
+----
+ebuild maven-bin-3.2.1.ebuild manifest
+http://www.apache.org/dist/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.tar.gz.asc
+http://www.apache.org/dist/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.tar.gz.md5
+
+gpg --keyserver pgpkeys.mit.edu --recv-key BB617866
+gpg --verify apache-maven-3.2.1-bin.tar.gz.asc /usr/portage/distfiles/apache-maven-3.2.1-bin.tar.gz 
+md5sum -b /usr/portage/distfiles/apache-maven-3.2.1-bin.tar.gz | gawk '{ print $1 }' | diff -w -s /dev/stdin apache-maven-3.2.1-bin.tar.gz.md5
+---
+
 * Why :
 ** aopalliance-1
 ** avalon-framework-4.1
