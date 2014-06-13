@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/maven/maven-${MY_MV}/${PV}/binaries/${MY_P}-bin.tar.gz"
 HOMEPAGE="http://maven.apache.org/"
 
 LICENSE="Apache-2.0"
-SLOT="3.2"
+SLOT="3.1"
 KEYWORDS="~amd64 ~x86"
 
 # TODO: Needs further resolution:
