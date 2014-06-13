@@ -29,7 +29,6 @@ DEPEND="|| ( app-admin/eselect-java app-admin/eselect-maven )
 	dev-java/aopalliance:1
 	dev-java/avalon-framework:4.1
 	dev-java/commons-cli:1
-	dev-java/commons-io:1
 	dev-java/javax-inject:0
 	dev-java/jsoup:0
 	dev-java/jsr250:0
@@ -53,7 +52,7 @@ java_prepare() {
 
 	# Symlink jars.
 	cd lib || die
-	java-pkg_jar-from aopalliance-1,avalon-framework-4.1,commons-cli-1,commons-io-1,interceptor-api,javax-inject,jsoup,jsr250,juel,osgi-core-api,servlet-api-2.4
+	java-pkg_jar-from aopalliance-1,avalon-framework-4.1,commons-cli-1,interceptor-api,javax-inject,jsoup,jsr250,juel,osgi-core-api,servlet-api-2.4
 	has_version dev-java/commons-logging:0 && java-pkg_jar-from commons-logging
 	has_version dev-java/avalon-logkit:2.0 && java-pkg_jar-from avalon-logkit-2.0
 	has_version dev-java/log4j:0 && java-pkg_jar-from log4j
