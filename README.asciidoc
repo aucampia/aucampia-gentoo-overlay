@@ -6,7 +6,7 @@ repo_name:: +aucampia-gentoo-overlay+
 
 git sources::
 https::: link:https://github.com/aucampia/aucampia-gentoo-overlay.git[]
-git::: link:git:://github.com/aucampia/aucampia-gentoo-overlay.git[]
+git::: link:git://github.com/aucampia/aucampia-gentoo-overlay.git[]
 git+ssh::: link:git+ssh://github.com/aucampia/aucampia-gentoo-overlay.git[]
 
 == News
