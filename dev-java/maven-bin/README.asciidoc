@@ -6,9 +6,6 @@
 
 == Links
 
-* link:http://www.gentoo.org/proj/en/java/[gentoo.org / The Java Project]
-** link:http://www.gentoo.org/proj/en/java/java-devel.xml[Gentoo Java Packaging Guide]
-
 == Notes
 
 * /usr/portage/eclass/java-pkg-2.eclass

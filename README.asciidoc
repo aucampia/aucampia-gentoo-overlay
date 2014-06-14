@@ -116,6 +116,13 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 
 * link:http://wiki.gentoo.org/wiki/Project:Python[Gentoo Wiki / Python Project]
 * link:http://www.gentoo.org/proj/en/Python/index.xml[gentoo.org / Python]
+** link:http://wiki.gentoo.org/wiki/Project:Python/python-r1[python-r1 (Developer's Guide)]
+** link:http://wiki.gentoo.org/wiki/Python-r1/examples[python-r1 / examples]
+
+=== Java
+
+* link:http://www.gentoo.org/proj/en/java/[gentoo.org / The Java Project]
+** link:http://www.gentoo.org/proj/en/java/java-devel.xml[Gentoo Java Packaging Guide]
 
 == Git Help
 
