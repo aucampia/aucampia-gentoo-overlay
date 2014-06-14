@@ -1,0 +1,15 @@
+= link:https://github.com/aucampia/aucampia-gentoo-overlay/dev-java/maven-bin[aucampia-gentoo-overlay/app-misc/liveusb-creator]
+
+== Info
+
+== Bugs
+
+
+
+== Notes
+
+https://fedorahosted.org/liveusb-creator/
+http://bgo.zugaina.org/
+rsync://gentoo.zugaina.org/bgo-overlay
+
+https://admin.fedoraproject.org/pkgdb/package/isomd5sum/
