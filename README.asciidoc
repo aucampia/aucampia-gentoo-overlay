@@ -1,4 +1,8 @@
 = link:https://github.com/aucampia/aucampia-gentoo-overlay[ Iwan Aucamp's Gentoo Overlay ]
+Iwan Aucamp
+2014-06-27
+:toc:
+:numbered:
 
 == Info
 
