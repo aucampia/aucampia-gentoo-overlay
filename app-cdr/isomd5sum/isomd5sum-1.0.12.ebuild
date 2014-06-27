@@ -39,8 +39,8 @@ src_compile()
 src_install()
 {
 	emake DESTDIR="${D}" install-devel install-bin
-    python_foreach_impl run_in_build_dir emake DESTDIR="${D}" install-python
+	python_foreach_impl run_in_build_dir emake DESTDIR="${D}" install-python
 
-    dodoc README
+	dodoc README
 }
 

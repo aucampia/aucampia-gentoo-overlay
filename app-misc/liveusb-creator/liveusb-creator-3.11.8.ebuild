@@ -35,6 +35,6 @@ sys-devel/gettext"
 
 #src_install()
 #{
-#    dodoc PKG-INFO README.txt
+#	dodoc PKG-INFO README.txt
 #}
 
