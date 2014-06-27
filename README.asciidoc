@@ -18,6 +18,9 @@ git+ssh::: link:git+ssh://github.com/aucampia/aucampia-gentoo-overlay.git[]
 	* Added +app-cdr/isomd5sum-1.0.12+
 	* Added +app-misc/liveusb-creator-3.11.8+
 
+2014-06-13::
+	* Added +dev-java/maven-bin-3.2.1+
+
 == Instructions
 
 NOTE: These commands require super user permissions (i.e. use +sudo+)
