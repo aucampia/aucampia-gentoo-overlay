@@ -1,4 +1,8 @@
 = link:https://github.com/aucampia/aucampia-gentoo-overlay[ Iwan Aucamp's Gentoo Overlay ]
+////
+vim: set ts=8 sw=8 :
+vim: set filetype=asciidoc :
+////
 Iwan Aucamp
 2014-06-27
 :toc:
@@ -151,8 +155,15 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 
 * link:http://www.gnu.org/software/autoconf/manual/[ Manual ]
 ** link:http://www.gnu.org/software/autoconf/manual/autoconf.html[ HTML single page ]
-** link:http://www.gnu.org/software/autoconf/manual/html_node/index.html[ HTML ]
+** link:http://www.gnu.org/software/autoconf/manual/html_node/index.html[ HTML multi page ]
 ** link:http://www.gnu.org/software/autoconf/manual/autoconf.pdf[ PDF ]
+
+=== GNU Make
+
+* link:http://www.gnu.org/software/make/manual/[ Manual ]
+** link:http://www.gnu.org/software/make/manual/make.html[ HTML single page ]
+** link:http://www.gnu.org/software/make/manual/html_node/index.html[ HTML multi page ]
+** link:http://www.gnu.org/software/make/manual/make.pdf[ PDF ]
 
 == Git Help
 
@@ -181,12 +192,25 @@ git remote set-url origin https://github.com/aucampia/aucampia-gentoo-overlay.gi
 * link:https://github.com/nutztherookie/wacfg-overlay[ wacfg-overlay ]
 * link:https://github.com/shiznix/unity-gentoo[ unity-gentoo ]
 
+== Credits
+
+* +::gentoo+ -> +dev-java/maven-bin+
+* +::sabayon+ -> +app-cdr/isomd5sum+
+* +::bgo-overlay+ -> +app-misc/liveusb-creator+
+* +::xarthisius+ -> +net-misc/gwibber+
+* +::unity-gentoo+ -> +dev-libs/libaccounts-glib+
+* +::unity-gentoo+ -> +dev-libs/libsignon-glib+
+
 == Notes
 
 ----
 wget http://www.gentoo.org/proj/en/overlays/repositories.xml
 wget http://gpo.zugaina.org/lst/gpo-repositories.xml
 sed -n 's/^.*<source[^>]\+>.*\(github.com\/.*\).git<\/source>.*$/\1/gp' repositories.xml | sort | uniq
+----
+
+----
+find . \( -name tmp -o -name .git \) -prune -o -name '*.ebuild' -type f -print
 ----
 
 ----
@@ -198,6 +222,10 @@ grep -r --include='*.ebuild' --exclude-dir=tmp --exclude-dir=.git --exclude-dir=
 ----
 find /usr/portage/ \( -name tmp -o -name .git -o -name distfiles \) -prune -o -name '*.ebuild' -type f -print
 grep -r --include='*.ebuild' --exclude-dir=tmp --exclude-dir=.git --exclude-dir=distfiles get_version_component_range /usr/portage/
+----
+
+----
+find /usr/portage/ \( -name tmp -o -name .git -o -name distfiles \) -prune -o -name '*.eclass' -type f -print
 ----
 
 ----
