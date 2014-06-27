@@ -13,3 +13,6 @@ http://bgo.zugaina.org/
 rsync://gentoo.zugaina.org/bgo-overlay
 
 https://admin.fedoraproject.org/pkgdb/package/isomd5sum/
+
+https://fedoraproject.org/wiki/How_to_create_and_use_Live_USB#luc
+
