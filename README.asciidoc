@@ -1,4 +1,4 @@
-= link:https://github.com/aucampia/aucampia-gentoo-overlay[Iwan Aucamp's Gentoo Overlay]
+= link:https://github.com/aucampia/aucampia-gentoo-overlay[ Iwan Aucamp's Gentoo Overlay ]
 
 == Info
 
@@ -96,33 +96,49 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 
 == Links
 
-* link:http://devmanual.gentoo.org/[Gentoo Development Guide]
-** link:http://devmanual.gentoo.org/quickstart/[Quickstart Ebuild Guide]
-** link:http://devmanual.gentoo.org/general-concepts/index.html[General Concepts] / link:http://devmanual.gentoo.org/general-concepts/overlay/index.html[Overlay]
-** link:http://devmanual.gentoo.org/ebuild-writing/index.html[Ebuild Writing] / link:http://devmanual.gentoo.org/ebuild-writing/variables/index.html[Variables]
-* link:https://wiki.gentoo.org/wiki/Main_Page[Gentoo Wiki]
-** link:https://wiki.gentoo.org/wiki/Overlay[Overlay]
-** link:https://wiki.gentoo.org/wiki/Layman[Layman]
-** link:https://wiki.gentoo.org/wiki/Repository_format[Repository format]
-*** link:https://wiki.gentoo.org/wiki/Repository_format/metadata/layout.conf[metadata/layout.conf]
-*** link:https://wiki.gentoo.org/wiki/Repository_format/profiles/repo_name[profiles/repo_name]
-* link:https://www.gentoo.org/proj/en/overlays/[Gentoo Overlay Team]
-** link:https://www.gentoo.org/proj/en/overlays/devguide.xml[Developers' Guide]
-** link:https://www.gentoo.org/proj/en/overlays/userguide.xml[Users' Guide]
-* link:http://sourceforge.net/projects/layman/[Layman @ SourceForge]
-** link:http://layman.sourceforge.net/[Site]
+* link:http://devmanual.gentoo.org/[ Gentoo Development Guide ]
+** link:http://devmanual.gentoo.org/quickstart/[ Quickstart Ebuild Guide ]
+** link:http://devmanual.gentoo.org/general-concepts/index.html[ General Concepts ] / link:http://devmanual.gentoo.org/general-concepts/overlay/index.html[ Overlay ]
+** link:http://devmanual.gentoo.org/ebuild-writing/index.html[ Ebuild Writing ] / link:http://devmanual.gentoo.org/ebuild-writing/variables/index.html[ Variables ]
+** link:https://devmanual.gentoo.org/eclass-reference/index.html[ Eclass Reference ]
+*** link:https://devmanual.gentoo.org/eclass-reference/versionator.eclass/index.html[ +VERSIONATOR+ ]
+*** link:https://devmanual.gentoo.org/eclass-reference/vala.eclass/index.html[ +VALA+ ]
+* link:https://wiki.gentoo.org/wiki/Main_Page[ Gentoo Wiki ]
+** link:https://wiki.gentoo.org/wiki/Overlay[ Overlay ]
+** link:https://wiki.gentoo.org/wiki/Layman[ Layman ]
+** link:https://wiki.gentoo.org/wiki/Repository_format[ Repository format ]
+*** link:https://wiki.gentoo.org/wiki/Repository_format/metadata/layout.conf[ +metadata/layout.conf+ ]
+*** link:https://wiki.gentoo.org/wiki/Repository_format/profiles/repo_name[ +profiles/repo_name+ ]
+* link:https://www.gentoo.org/proj/en/overlays/[ Gentoo Overlay Team ]
+** link:https://www.gentoo.org/proj/en/overlays/devguide.xml[ Developers' Guide ]
+** link:https://www.gentoo.org/proj/en/overlays/userguide.xml[ Users' Guide ]
+* link:http://sourceforge.net/projects/layman/[ Layman @ SourceForge ]
+** link:http://layman.sourceforge.net/[ Site ]
 
 === Python
 
-* link:http://wiki.gentoo.org/wiki/Project:Python[Gentoo Wiki / Python Project]
-* link:http://www.gentoo.org/proj/en/Python/index.xml[gentoo.org / Python]
-** link:http://wiki.gentoo.org/wiki/Project:Python/python-r1[python-r1 (Developer's Guide)]
-** link:http://wiki.gentoo.org/wiki/Python-r1/examples[python-r1 / examples]
+* link:http://wiki.gentoo.org/wiki/Project:Python[ Gentoo Wiki / Python Project ]
+* link:http://www.gentoo.org/proj/en/Python/index.xml[ gentoo.org / Python ]
+** link:http://wiki.gentoo.org/wiki/Project:Python/python-r1[ python-r1 (Developer's Guide) ]
+** link:http://wiki.gentoo.org/wiki/Python-r1/examples[ python-r1 / examples ]
+** link:http://devmanual.gentoo.org/[ Gentoo Development Guide ] / link:https://devmanual.gentoo.org/eclass-reference/index.html[ Eclass Reference ]
+*** link:https://devmanual.gentoo.org/eclass-reference/python-r1.eclass/index.html[ +PYTHON-R1+ ]
+*** link:https://devmanual.gentoo.org/eclass-reference/distutils-r1.eclass/index.html[ +DISTUTILS-R1+ ]
 
 === Java
 
-* link:http://www.gentoo.org/proj/en/java/[gentoo.org / The Java Project]
-** link:http://www.gentoo.org/proj/en/java/java-devel.xml[Gentoo Java Packaging Guide]
+* link:http://www.gentoo.org/proj/en/java/[ gentoo.org / The Java Project ]
+** link:http://www.gentoo.org/proj/en/java/java-devel.xml[ Gentoo Java Packaging Guide ]
+** link:http://devmanual.gentoo.org/[ Gentoo Development Guide ] / link:https://devmanual.gentoo.org/eclass-reference/index.html[ Eclass Reference ] / link:https://devmanual.gentoo.org/eclass-reference/java-pkg-2.eclass/index.html[ +JAVA-PKG-2+ ]
+
+=== GNU Autotools
+
+==== GNU Autoconf
+
+* link:http://www.gnu.org/software/autoconf/manual/[ Manual ]
+** link:http://www.gnu.org/software/autoconf/manual/autoconf.html[ HTML single page ]
+** link:http://www.gnu.org/software/autoconf/manual/html_node/index.html[ HTML ]
+** link:http://www.gnu.org/software/autoconf/manual/autoconf.pdf[ PDF ]
 
 == Git Help
 
@@ -147,8 +163,9 @@ git remote set-url origin https://github.com/aucampia/aucampia-gentoo-overlay.gi
 
 == Examples
 
-* link:https://github.com/psomas/synnefo-overlay[Gentoo ebuild overlay for Synnefo]
-* link:https://github.com/nutztherookie/wacfg-overlay[wacfg-overlay]
+* link:https://github.com/psomas/synnefo-overlay[ Gentoo ebuild overlay for Synnefo ]
+* link:https://github.com/nutztherookie/wacfg-overlay[ wacfg-overlay ]
+* link:https://github.com/shiznix/unity-gentoo[ unity-gentoo ]
 
 == Notes
 
@@ -159,10 +176,21 @@ sed -n 's/^.*<source[^>]\+>.*\(github.com\/.*\).git<\/source>.*$/\1/gp' reposito
 ----
 
 ----
+find . \( -name tmp -o -name .git \) -prune -o -name '*.ebuild' -type f -print
+find . \( -name tmp -o -name .git \) -prune -o -name '*.asciidoc' -type f -print
+grep -r --include='*.ebuild' --exclude-dir=tmp --exclude-dir=.git --exclude-dir=distfiles inherit .
+----
+
+----
+find /usr/portage/ \( -name tmp -o -name .git -o -name distfiles \) -prune -o -name '*.ebuild' -type f -print
+grep -r --include='*.ebuild' --exclude-dir=tmp --exclude-dir=.git --exclude-dir=distfiles get_version_component_range /usr/portage/
+----
+
+----
 ebuild ... manifest
 sudo ebuild ... clean package
 ----
 
 * link:http://dev.gentoo.org/~zmedico/portage/doc/man/portage.5.html[]
-* /usr/portage/metadata/dtd/repositories.dtd
+* link:file:///usr/portage/metadata/dtd/repositories.dtd[]
 
