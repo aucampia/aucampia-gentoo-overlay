@@ -165,6 +165,13 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 ** link:http://www.gnu.org/software/make/manual/html_node/index.html[ HTML multi page ]
 ** link:http://www.gnu.org/software/make/manual/make.pdf[ PDF ]
 
+=== GNU Make Standard Library
+
+* link:http://gmsl.sourceforge.net/[ Website ]
+* link:http://sourceforge.net/projects/gmsl/[ SourceForge Project Page ]
+** link:http://gmsl.cvs.sourceforge.net/viewvc/gmsl/[ ViewVC ]
+
+
 == Git Help
 
 * link:http://git-scm.com/book[]
@@ -200,6 +207,10 @@ git remote set-url origin https://github.com/aucampia/aucampia-gentoo-overlay.gi
 * +::xarthisius+ -> +net-misc/gwibber+
 * +::unity-gentoo+ -> +dev-libs/libaccounts-glib+
 * +::unity-gentoo+ -> +dev-libs/libsignon-glib+
+
+== TODO
+
+* Copy resources from other overlays with history
 
 == Notes
 
