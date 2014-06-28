@@ -15,9 +15,9 @@ help:
 	@echo "= $(repo_name) makefile help"
 	@echo "== targets"
 	@#     ++++++++++++++++++++++++++++++
-	@echo -e "repoxml :\r\t\t\t\tfetch repo xml files"
+	@echo -e "repoxml :\r\t\t\t\tfetch/update repo xml files"
 	@for item in $(repoxml_list); do \
-		echo -e "repoxml-$${item} :\r\t\t\t\tfetch $${item} repo xml file"; \
+		echo -e "repoxml-$${item} :\r\t\t\t\tfetch/update $${item} repo xml file"; \
 	done
 	@echo -e "overlay :\r\t\t\t\tfetch/update all upstream overlays"
 	@for item in $(overlay_list); do \
@@ -32,7 +32,7 @@ repoxml-%:
 	@echo "$(@) <- $(^)"
 	@echo "repoxml_$(patsubst repoxml-%,%,$(@))_url=$(repoxml_$(patsubst repoxml-%,%,$(@))_url)"
 	mkdir -p upstream/repoxml/$(patsubst repoxml-%,%,$(@))
-	cd upstream/repoxml/$(patsubst repoxml-%,%,$(@)) && curl -OJ $(repoxml_$(patsubst repoxml-%,%,$(@))_url)
+	cd upstream/repoxml/$(patsubst repoxml-%,%,$(@)) && curl -LOJ $(repoxml_$(patsubst repoxml-%,%,$(@))_url)
 	
 
 #$(info $(foreach overlay_item,$(overlay_list),overlay-$(overlay_item)))
@@ -58,4 +58,5 @@ overlay-%:
 				git clone $${overlay_url}/ upstream/overlay/$${overlay_name}/; \
 			fi;; \
 	esac
+
 
