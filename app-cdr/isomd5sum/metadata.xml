@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		<pkg>app-cdr/isomd5sum</pkg> provides a way of making use of the ISO9660 application data
+		area to store md5sum data about the iso.  This allows you to check the
+		iso given nothing more than the iso itself.
+	</longdescription>
+	<upstream>
+		<maintainer status="active">
+			<email>bcl@redhat.com</email>
+			<name>Brian C. Lane</name>
+		</maintainer>
+		<maintainer status="unknown">
+			<email>dpierce@redhat.com</email>
+			<name>Darryl L. Pierce</name>
+		</maintainer>
+		<maintainer status="unknown">
+			<email>hdegoede@redhat.com</email>
+			<name>Hans de Goede</name>
+		</maintainer>
+		<maintainer status="unknown">
+			<email>katzj@redhat.com</email>
+			<name>Jeremy Katz</name>
+		</maintainer>
+		<maintainer status="unknown">
+			<email>rvykydal@redhat.com</email>
+			<name>Radek Vykydal</name>
+		</maintainer>
+		<maintainer status="unknown">
+			<email>ryan@finnie.org</email>
+			<name>Ryan Finnie</name>
+		</maintainer>
+		<changelog>https://git.fedorahosted.org/cgit/isomd5sum.git/log/</changelog>
+	</upstream>
+</pkgmetadata>

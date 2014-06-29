@@ -52,4 +52,3 @@ src_install()
 
 	dodoc README
 }
-
