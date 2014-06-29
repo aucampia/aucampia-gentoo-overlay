@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		<pkg>app-misc/liveusb-creator</pkg> is a cross-platform tool for easily installing live operating systems on to USB flash drives.
+
+		Features:
+
+		* Works in Windows and Linux!
+		* Completely non-destructive install. There is no need to deal with formatting or partitioning your USB key.
+		* Supports automatically downloading various Fedora releases, as well as ​Sugar on a Stick!
+		* Automatically detects all of your removable devices
+		* Persistent storage creation. This lets you to allocate extra space on your USB stick, allowing you to save files and make modifications to your live operating system that will persist after you reboot. This essentially lets you carry your own personalized Fedora with you at all times.
+		* Checksum verification of known releases, to ensure that you've downloaded the correct bits
+		* Translated in many languages
+	</longdescription>
+	<upstream>
+		<maintainer status="unknown">
+			<email>kushal@fedoraproject.org</email>
+			<name>Kushal Das</name>
+		</maintainer>
+		<maintainer status="unknown">
+			<email>lmacken@redhat.com</email>
+			<name>Luke Macken</name>
+		</maintainer>
+		<changelog>https://git.fedorahosted.org/cgit/liveusb-creator.git/tree/ChangeLog</changelog>
+		<doc lang="en">https://fedorahosted.org/liveusb-creator/wiki</doc>
+	</upstream>
+</pkgmetadata>

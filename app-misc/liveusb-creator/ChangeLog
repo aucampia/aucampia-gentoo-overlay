@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/liveusb-creator
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  29 Jun 2014; Iwan Aucamp <aucampia@gmail.com> liveusb-creator-3.11.8.ebuild,
+  README.asciidoc, +metadata.xml:
+  Add initial ebuilds.
+

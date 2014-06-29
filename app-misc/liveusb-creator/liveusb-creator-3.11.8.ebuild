@@ -14,7 +14,7 @@ SRC_URI="https://fedorahosted.org/releases/l/i/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~mips ~sparc ~x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 COMMON_DEPEND="
@@ -37,9 +37,3 @@ DEPEND="
 	dev-util/desktop-file-utils
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
-
-#src_install()
-#{
-#	dodoc PKG-INFO README.txt
-#}
-
