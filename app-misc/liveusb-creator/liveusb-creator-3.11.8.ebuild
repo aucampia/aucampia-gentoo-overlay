@@ -17,21 +17,26 @@ SLOT="0"
 KEYWORDS="~mips ~sparc ~x86 ~amd64"
 IUSE=""
 
-COMMON_DEPEND="${PYTHON_DEPS}
-dev-python/PyQt4
-sys-devel/gettext"
-
-RDEPEND="${COMMON_DEPEND}
-sys-boot/syslinux
-app-cdr/isomd5sum
-dev-python/urlgrabber
->=dev-python/pyparted-2
-dev-python/dbus-python
+COMMON_DEPEND="
+	${PYTHON_DEPS}
+	dev-python/PyQt4[${PYTHON_USEDEP}]
+	sys-devel/gettext
 "
-DEPEND="${COMMON_DEPEND}
-dev-util/desktop-file-utils
-dev-python/setuptools
-sys-devel/gettext"
+
+RDEPEND="
+	${COMMON_DEPEND}
+	sys-boot/syslinux
+	app-cdr/isomd5sum[${PYTHON_USEDEP}]
+	dev-python/urlgrabber[${PYTHON_USEDEP}]
+	>=dev-python/pyparted-2[${PYTHON_USEDEP}]
+	dev-python/dbus-python[${PYTHON_USEDEP}]
+"
+
+DEPEND="
+	${COMMON_DEPEND}
+	dev-util/desktop-file-utils
+	dev-python/setuptools[${PYTHON_USEDEP}]
+"
 
 #src_install()
 #{
