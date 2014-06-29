@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/turpial
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*turpial-3.0 (29 Jun 2014)
+
+  29 Jun 2014; Iwan Aucamp <aucampia@gmail.com> +turpial-3.0.ebuild,
+  +files/turpial-3.0-destop.patch, +README.asciidoc, +metadata.xml:
+  Add initial ebuilds.
+

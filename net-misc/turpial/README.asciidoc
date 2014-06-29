@@ -1,0 +1,11 @@
+// Copyright 2014 Iwan Aucamp
+// vim: set ts=8 sw=8 :
+// vim: set filetype=asciidoc :
+= net-apps/turpial
+
+== Notes
+
+----
+curl -LOJ https://github.com/satanas/turpial/archive/3.0.tar.gz
+----
+

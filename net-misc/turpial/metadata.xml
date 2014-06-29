@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en"><pkg>net-misc/turpial</pkg> is a lightweight and beautiful microblogging client written in Python.</longdescription>
+	<use>
+		<flag name="gtk">Install GTK+ based UI.</flag>
+		<flag name="qt4">Install QT4 based UI.</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<email>wil.alejandro@gmail.com</email>
+			<name>Wil Alvarez</name>
+			<description>Creator and current maintainer. Alias: satanas.</description>
+		</maintainer>
+		<changelog>https://raw.githubusercontent.com/satanas/Turpial/development/ChangeLog</changelog>
+		<doc lang="en">http://wiki.turpial.org.ve/</doc>
+		<bugs-to>https://github.com/satanas/Turpial/issues</bugs-to>
+		<remote-id type='github'>satanas/Turpial</remote-id>
+		<remote-id type='pypi'>turpial</remote-id>
+	</upstream>
+</pkgmetadata>
