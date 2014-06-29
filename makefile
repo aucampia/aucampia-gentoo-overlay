@@ -21,33 +21,47 @@ repoxml_gpo.zugaina.org_url=http://gpo.zugaina.org/lst/gpo-repositories.xml
 
 overlay_list= \
 	layman:sabayon \
-	gpo.zugaina.org:bgo-overlay \
 	layman:xarthisius \
 	layman:unity-gentoo \
+	layman:sebasmagri \
+	layman:last-hope \
+	gpo.zugaina.org:bgo-overlay \
 
 
 external_list= \
+
+
+__external_list= \
 	unity-gentoo:dev-libs/libaccounts-glib \
 	unity-gentoo:dev-libs/libsignon-glib \
+	unity-gentoo:unity-base/signon \
+	unity-gentoo:eclass/ubuntu-versionator.eclass \
+
+
+indent=\t\t\t\t\t\t
 
 help:
 	@#     ++++++++++++++++++++++++++++++++++++++++
 	@#     ========================================
 	@#     ================================================================================
 	@echo "= $(repo_name) makefile help"
+	@echo
 	@echo "== targets"
 	@#     ++++++++++++++++++++++++++++++
-	@echo -e "repoxml :\r\t\t\t\t\tfetch/update repo xml files"
+	@echo
+	@echo -e "repoxml\r$(indent)fetch/update repo xml files"
 	@for item in $(repoxml_list); do \
-		echo -e "repoxml-$${item} :\r\t\t\t\t\tfetch/update $${item} repo xml file"; \
+		echo -e "repoxml-$${item}\r$(indent)fetch/update $${item} repo xml file"; \
 	done
-	@echo -e "overlay :\r\t\t\t\t\tfetch/update all upstream overlays"
+	@echo
+	@echo -e "overlay\r$(indent)fetch/update all upstream overlays"
 	@for item in $(overlay_list); do \
-		echo -e "overlay-$${item//*:} :\r\t\t\t\t\tfetch/update $${item} upstream overlay"; \
+		echo -e "overlay-$${item//*:}\r$(indent)fetch/update $${item//*:} upstream overlay"; \
 	done
-	@echo -e "external :\r\t\t\t\t\tfetch/update all external ebuilds"
+	@echo
+	@echo -e "external\r$(indent)fetch/update all external resources"
 	@for item in $(external_list); do \
-		echo -e "external-$${item//*:} :\r\t\t\t\t\tfetch/update $${item} upstream external ebuild"; \
+		echo -e "external-$${item//*:}\r$(indent)fetch/update $${item//*:} upstream external resource"; \
 	done
 
 
@@ -101,8 +115,8 @@ external-$(1):
 	@echo "$$(@) <- $$(^)"
 	@echo "external=$$(@:external-%=%)"
 	@echo "overlay=$$(<:overlay-%=%)"
-	mkdir -p $$(@:external-%=%)/
-	rsync -v -c -rptgo upstream/overlay/$$(<:overlay-%=%)/$$(@:external-%=%)/ $$(@:external-%=%)/
+	mkdir -p $$(dir $$(@:external-%=%))
+	rsync -v -c -rptgo upstream/overlay/$$(<:overlay-%=%)/$$(@:external-%=%) $$(dir $$(@:external-%=%))
 endef
 
 $(foreach __item,$(external_list),$(info $(call external_template,$(word 2,$(subst :, ,$(__item))))))
