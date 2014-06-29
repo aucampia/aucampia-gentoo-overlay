@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils-r1
+inherit distutils-r1 git-r3
 
 DESCRIPTION="A library that handles multiple microblogging protocols."
 HOMEPAGE="http://turpial.org.ve/"
