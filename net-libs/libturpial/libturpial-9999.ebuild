@@ -15,7 +15,7 @@ EGIT_BRANCH="development"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="
@@ -34,4 +34,4 @@ RDEPEND="
 	${COMMON_DEPEND}
 "
 
-DOCS=( "AUTHORS" "COPYING" "ChangeLog" "README.rst" )
+DOCS=( "AUTHORS" "ChangeLog" "COPYING" "README.rst" )

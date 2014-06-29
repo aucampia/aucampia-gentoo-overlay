@@ -1,3 +1,7 @@
+# Exclude 'tests' from packages to install. distutils-r1 doesnt like
+# it and its incorrect. This is already fixed upstream in development
+# branch of git repo.
+
 diff -U1 -r libturpial-1.7.0.org/setup.py libturpial-1.7.0/setup.py
 --- libturpial-1.7.0.org/setup.py	2014-04-08 03:06:48.000000000 +0200
 +++ libturpial-1.7.0/setup.py	2014-06-28 16:55:38.707222450 +0200

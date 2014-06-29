@@ -3,10 +3,13 @@
 // vim: set filetype=asciidoc :
 = net-libs/libturpial
 
-----
-curl -LOJ https://github.com/satanas/libturpial/archive/1.7.0.tar.gz
-----
-
-== BUGS
+== Upstream Issues
 
 * README.rst has wrong version of json
+
+== Notes
+
+----
+curl -LOJ https://github.com/satanas/libturpial/archive/1.7.0.tar.gz
+https://readthedocs.org/projects/libturpial/
+----

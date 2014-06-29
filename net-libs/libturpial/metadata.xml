@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		<pkg>net-libs/libturpial</pkg> is a library that handles multiple microblogging protocols. It implements a lot of features and aims to support all the features for each protocol. This library is the backend used for <pkg>net-misc/turpial</pkg>.
+	</longdescription>
+	<upstream>
+		<maintainer status="active">
+			<email>wil.alejandro@gmail.com</email>
+			<name>Wil Alvarez</name>
+			<description>Creator and current maintainer. Alias: satanas.</description>
+		</maintainer>
+		<changelog>https://raw.githubusercontent.com/satanas/libturpial/development/ChangeLog</changelog>
+		<doc lang="en">http://libturpial.readthedocs.org/</doc>
+		<bugs-to>https://github.com/satanas/libturpial/issues</bugs-to>
+		<remote-id type='github'>satanas/libturpial</remote-id>
+		<remote-id type='pypi'>libturpial</remote-id>
+	</upstream>
+</pkgmetadata>
