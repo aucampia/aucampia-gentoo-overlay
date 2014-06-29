@@ -1,0 +1,8 @@
+diff -U1 -r libturpial-1.7.0.org/setup.py libturpial-1.7.0/setup.py
+--- libturpial-1.7.0.org/setup.py	2014-04-08 03:06:48.000000000 +0200
++++ libturpial-1.7.0/setup.py	2014-06-28 16:55:38.707222450 +0200
+@@ -47,3 +47,3 @@
+     include_package_data=True,
+-    packages=find_packages(),
++    packages=find_packages(exclude=['tests']),
+     package_data={

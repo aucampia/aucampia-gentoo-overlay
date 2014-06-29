@@ -1,0 +1,8 @@
+// Copyright 2014 Iwan Aucamp
+// vim: set ts=8 sw=8 :
+// vim: set filetype=asciidoc :
+= net-libs/libturpial
+
+----
+curl -LOJ https://github.com/satanas/libturpial/archive/1.7.0.tar.gz
+----
