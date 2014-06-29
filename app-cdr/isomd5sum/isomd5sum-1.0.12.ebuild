@@ -14,7 +14,7 @@ SRC_URI="https://git.fedorahosted.org/cgit/${PN}.git/snapshot/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~mips ~sparc ~x86 ~amd64"
+KEYWORDS=" ~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="
