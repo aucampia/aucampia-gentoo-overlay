@@ -6,3 +6,7 @@
 ----
 curl -LOJ https://github.com/satanas/libturpial/archive/1.7.0.tar.gz
 ----
+
+== BUGS
+
+* README.rst has wrong version of json

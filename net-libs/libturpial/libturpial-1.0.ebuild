@@ -20,8 +20,8 @@ IUSE=""
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	>=dev-python/simplejson-1.9.2[${PYTHON_USEDEP}]
-	>=dev-python/oauth-1.0.1[${PYTHON_USEDEP}]
-	>=dev-python/requests-2.0.0[${PYTHON_USEDEP}]
+	dev-python/oauth[${PYTHON_USEDEP}]
+	dev-python/requests[${PYTHON_USEDEP}]
 "
 
 DEPEND="
