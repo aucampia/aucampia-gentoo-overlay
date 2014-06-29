@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+	</longdescription>
+	<upstream>
+		<maintainer status="active">
+			<email>apache@apache.org</email>
+			<name>Apache Software Foundation</name>
+		</maintainer>
+		<changelog>http://maven.apache.org/release-notes-all.html</changelog>
+		<doc lang="en">http://maven.apache.org/guides/index.html</doc>
+		<bugs-to>http://jira.codehaus.org/browse/MNG</bugs-to>
+	</upstream>
+</pkgmetadata>

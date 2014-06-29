@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/maven-bin
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  29 Jun 2014; Iwan Aucamp <aucampia@gmail.com> maven-bin-3.2.1.ebuild,
+  maven-bin-3.2.2.ebuild, README.asciidoc, +metadata.xml:
+  Add ebuilds for maven-bin-3.2
+
