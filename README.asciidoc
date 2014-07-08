@@ -306,6 +306,11 @@ ebuild ... manifest
 sudo ebuild ... clean package
 ----
 
+----
+app-portage/gentoolkit-dev
+app-portage/overlay-utils
+----
+
 * link:http://dev.gentoo.org/~zmedico/portage/doc/man/portage.5.html[]
 * link:file:///usr/portage/metadata/dtd/repositories.dtd[]
 * link:file:///usr/portage/metadata/dtd/metadata.dtd[]
