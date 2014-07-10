@@ -1,0 +1,24 @@
+= aucampia-gentoo-overlay/dev-java/nexus-oss-bin
+
+TODO
+
+== TODO
+
+* doc
+* systemd
+
+== NOTES
+
+----
+/usr/lib/jvm/oracle-jdk-bin-1.7/bin/java -Djava.io.tmpdir=./tmp -Djava.net.preferIPv4Stack=true -Dcom.sun.jndi.ldap.connect.pool.protocol=plain ssl -Djava.library.path=bin/jsw/lib -classpath bin/jsw/lib/wrapper-3.2.3.jar:./lib/javax.servlet-3.0.0.v201112011016.jar:./lib/logback-access-1.1.2.jar:./lib/logback-classic-1.1.2.jar:./lib/logback-core-1.1.2.jar:./lib/jetty-http-8.1.11.v20130520.jar:./lib/plexus-interpolation-1.16.jar:./lib/metrics-core-2.2.0.jar:./lib/metrics-jetty-2.2.0.jar:./lib/jetty-util-8.1.11.v20130520.jar:./lib/jetty-jmx-8.1.11.v20130520.jar:./lib/jetty-io-8.1.11.v20130520.jar:./lib/nexus-bootstrap-2.8.1-01.jar:./lib/jetty-rewrite-8.1.11.v20130520.jar:./lib/jetty-webapp-8.1.11.v20130520.jar:./lib/jetty-continuation-8.1.11.v20130520.jar:./lib/jetty-server-8.1.11.v20130520.jar:./lib/jetty-servlet-8.1.11.v20130520.jar:./lib/jul-to-slf4j-1.7.6.jar:./lib/metrics-logback-2.2.0.jar:./lib/jetty-security-8.1.11.v20130520.jar:./lib/slf4j-api-1.7.6.jar:./lib/jetty-client-8.1.11.v20130520.jar:./lib/jetty-deploy-8.1.11.v20130520.jar:./lib/jetty-xml-8.1.11.v20130520.jar:./conf/ -Dwrapper.key=nliiPpyGOGnfHco7 -Dwrapper.port=32000 -Dwrapper.jvm.port.min=31000 -Dwrapper.jvm.port.max=31999 -Dwrapper.pid=10189 -Dwrapper.version=3.2.3 -Dwrapper.native_library=wrapper -Dwrapper.service=TRUE -Dwrapper.cpu.timeout=10 -Dwrapper.jvmid=1 org.sonatype.nexus.bootstrap.jsw.JswLauncher ./conf/jetty.xml ./conf/jetty-requestlog.xml
+
+#local dest="/opt/${JAVA_PKG_NAME}"
+#local ddest="${ED}${dest}"
+#dodir "${dest}/nexus"
+#cp -pPR nexus "${ddest}" || die
+
+
+#fowners "${my_user}:${my_group}" "${dest}"
+#fperms ugo=rX,u=w "${dest}"
+
+----

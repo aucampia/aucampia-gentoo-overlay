@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		Sonatype Nexus sets the standard for repository management providing development teams with the ability to proxy remote repositories and share software artifacts. Download Nexus and gain control over open source consumption and internal collaboration.
+	</longdescription>
+	<upstream>
+		<maintainer status="active">
+			<email>info@sonatype.com</email>
+			<name>Sonatype</name>
+			<description>Creator and current maintainer. Alias: satanas.</description>
+		</maintainer>
+		<changelog>https://support.sonatype.com/entries/23157258-Sonatype-Nexus-Professional-Release-Notes</changelog>
+		<doc lang="en">http://books.sonatype.com/nexus-book/reference/index.html</doc>
+		<bugs-to>https://github.com/sonatype/nexus-oss/issues</bugs-to>
+		<remote-id type='github'>sonatype/nexus-oss</remote-id>
+	</upstream>
+</pkgmetadata>

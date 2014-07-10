@@ -1,0 +1,81 @@
+diff -r -u nexus-2.8.1-01.org/bin/nexus nexus-2.8.1-01/bin/nexus
+--- a/bin/nexus	2014-07-09 01:10:14.174438722 +0200
++++ b/bin/nexus	2014-07-09 01:17:34.261962851 +0200
+@@ -127,41 +127,49 @@
+         ;;
+ esac
+ 
++decompose_arch()
++{
++    case "$DIST_ARCH" in
++        'athlon' | 'ia32' | 'i386' | 'i486' | 'i586' | 'i686')
++            DIST_ARCH="x86"
++            ;;
++        'amd64' | 'x86_64' | 'ia64')
++            DIST_ARCH="x86"
++            DIST_BITS=64
++            ;;
++        'ip27')
++            DIST_ARCH="mips"
++            ;;
++        'power' | 'powerpc' | 'power_pc')
++            DIST_ARCH="ppc"
++            ;;
++        'ppc64')
++            DIST_ARCH="ppc"
++            DIST_BITS=64
++            ;;
++        'pa_risc' | 'pa-risc')
++            DIST_ARCH="parisc"
++            ;;
++        'sun4u' | 'sparcv9')
++            DIST_ARCH="sparc"
++            ;;
++        '9000/800')
++            DIST_ARCH="parisc"
++            ;;
++        *)
++            DIST_ARCH="unknown"
++    esac
++}
++
+ # Resolve the architecture
+ DIST_ARCH=`uname -p | tr [:upper:] [:lower:] | tr -d [:blank:]`
+ DIST_BITS=32
++decompose_arch
+ if [ "$DIST_ARCH" = "unknown" ]
+ then
+     DIST_ARCH=`uname -m | tr [:upper:] [:lower:] | tr -d [:blank:]`
++    decompose_arch
+ fi
+-case "$DIST_ARCH" in
+-    'athlon' | 'ia32' | 'i386' | 'i486' | 'i586' | 'i686')
+-        DIST_ARCH="x86"
+-        ;;
+-    'amd64' | 'x86_64' | 'ia64')
+-        DIST_ARCH="x86"
+-        DIST_BITS=64
+-        ;;
+-    'ip27')
+-        DIST_ARCH="mips"
+-        ;;
+-    'power' | 'powerpc' | 'power_pc')
+-        DIST_ARCH="ppc"
+-        ;;
+-    'ppc64')
+-        DIST_ARCH="ppc"
+-        DIST_BITS=64
+-        ;;
+-    'pa_risc' | 'pa-risc')
+-        DIST_ARCH="parisc"
+-        ;;
+-    'sun4u' | 'sparcv9')
+-        DIST_ARCH="sparc"
+-        ;;
+-    '9000/800')
+-        DIST_ARCH="parisc"
+-        ;;
+-esac
+ 
+ # Extra architecture detection
+ case "$DIST_OS" in
