@@ -116,10 +116,12 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 * link:http://devmanual.gentoo.org/[ Gentoo Development Guide ]
 ** link:http://devmanual.gentoo.org/quickstart/[ Quickstart Ebuild Guide ]
 ** link:http://devmanual.gentoo.org/general-concepts/index.html[ General Concepts ]
+*** link:http://devmanual.gentoo.org/general-concepts/filesystem/index.html[ Filesystem ]
 *** link:http://devmanual.gentoo.org/general-concepts/overlay/index.html[ Overlay ]
 *** link:http://devmanual.gentoo.org/general-concepts/use-flags/index.html[ USE Flags ]
 ** link:http://devmanual.gentoo.org/ebuild-writing/index.html[ Ebuild Writing ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/eapi/index.html[ EAPI Usage and Description ]
+*** link:http://devmanual.gentoo.org/ebuild-writing/users-and-groups/index.html[ Users and Groups ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/variables/index.html[ Variables ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/misc-files/index.html[ Miscellaneous Files ]
 **** link:http://devmanual.gentoo.org/ebuild-writing/misc-files/metadata/index.html[ Package and Category +metadata.xml+ ]
@@ -132,6 +134,8 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 **** link:file:///usr/portage/eclass/vala.eclass[]
 *** link:https://devmanual.gentoo.org/eclass-reference/git-r3.eclass/index.html[ +GIT-R3+ ]
 **** link:file:///usr/portage/eclass/git-r3.eclass[]
+*** link:https://devmanual.gentoo.org/eclass-reference/eutils.eclass/index.html[ +EUTILS+ ]
+**** link:file:///usr/portage/eclass/eutils.eclass[]
 ** link:http://devmanual.gentoo.org/tools-reference/index.html[ Tools Reference ]
 *** link:http://devmanual.gentoo.org/tools-reference/echangelog/index.html[ echangelog -- ChangeLog Generation ]
 *** link:http://devmanual.gentoo.org/tools-reference/ekeyword/index.html[ ekeyword -- Keywording ]
@@ -233,7 +237,10 @@ git remote set-url origin https://github.com/aucampia/aucampia-gentoo-overlay.gi
 
 == TODO
 
-* Copy resources from other overlays with history
+* Use versionator instead of bash variable expansion.
+* Copy resources from other overlays with history [not needed now].
+* File bug for gjl gjl_java_args
+* File bug for uname in nexus ./bin/nexus
 
 == Notes
 
@@ -257,13 +264,19 @@ grep -r --include='*.ebuild' --exclude-dir=tmp --exclude-dir=upstream --exclude-
 
 ----
 find /usr/portage/ \( -name tmp -o -name .git -o -name distfiles \) -prune -o -name '*.ebuild' -type f -print
+find /usr/portage/ \( -name tmp -o -name .git -o -name distfiles \) -prune -o -name '*-bin*.ebuild' -type f -print | xargs grep 'inherit.*java'
 grep -r --include='*.ebuild' --exclude-dir=.git --exclude-dir=distfiles get_version_component_range /usr/portage/
 grep -r --include='*.ebuild' --exclude-dir=.git --exclude-dir=distfiles PATCHES /usr/portage/
 grep -r --include='*.ebuild' --exclude-dir=.git --exclude-dir=distfiles gecko /usr/portage/
+grep -r --include='*.ebuild' --exclude-dir=.git --exclude-dir=distfiles fowners /usr/portage/
+grep -r --include='*.ebuild' --exclude-dir=.git --exclude-dir=distfiles java-pkg_newjar /usr/portage/
+grep -r --include='*.ebuild' --exclude-dir=.git --exclude-dir=distfiles extglob /usr/portage/
 ----
 
 ----
 find /usr/portage/ \( -name tmp -o -name .git -o -name distfiles \) -prune -o -name '*.eclass' -type f -print
+find /usr/portage/ \( -name tmp -o -name .git -o -name distfiles \) -prune -o -name '*.eclass' -type f -print
+grep -ri /usr/portage/
 ----
 
 ----
@@ -287,6 +300,7 @@ repoman -p -d full
 
 ----
 /usr/portage/packages/
+/usr/portage/licenses/
 grep changelog /usr/portage/*/*/metadata.xml
 xmllint --valid metadata.xml
 grep -e qt4 -e gtk /usr/portage/profiles/use.desc
@@ -307,8 +321,26 @@ sudo ebuild ... clean package
 ----
 
 ----
+
+ls -d /usr/portage/*java*/*bin*/*.ebuild
+
+fowners
+
+permissions is not changed on ebuild ... merge
+----
+
+----
 app-portage/gentoolkit-dev
 app-portage/overlay-utils
+www-client/pybugz
+app-doc/devmanual
+----
+
+----
+http://git.overlays.gentoo.org/gitweb/?p=proj/java-config.git;a=summary
+man 8 runscript
+http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2&chap=4#doc_chap4
+http://git.overlays.gentoo.org/gitweb/?p=proj/java-config.git;a=blob;f=src/launcher.bash;h=3d777571ded8b561b8f6a42467ed2fad41b6cdad;hb=HEAD
 ----
 
 * link:http://dev.gentoo.org/~zmedico/portage/doc/man/portage.5.html[]
