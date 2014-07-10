@@ -20,11 +20,14 @@ repoxml_layman_url=http://www.gentoo.org/proj/en/overlays/repositories.xml
 repoxml_gpo.zugaina.org_url=http://gpo.zugaina.org/lst/gpo-repositories.xml
 
 overlay_list= \
+	layman:java \
 	layman:sabayon \
 	layman:xarthisius \
 	layman:unity-gentoo \
 	layman:sebasmagri \
 	layman:last-hope \
+	layman:godin \
+	layman:squeezebox \
 	gpo.zugaina.org:bgo-overlay \
 
 
@@ -75,7 +78,7 @@ repoxml-%:
 	@echo "$(@) <- $(^)"
 	@echo "repoxml_$(@:repoxml-%=%)_url=$(repoxml_$(@:repoxml-%=%)_url)"
 	mkdir -p upstream/repoxml/$(@:repoxml-%=%)
-	curl -L $(repoxml_$(@:repoxml-%=%)_url) -o upstream/repoxml/$(@:repoxml-%=%)/repositories.xml
+	curl --insecure -L $(repoxml_$(@:repoxml-%=%)_url) -o upstream/repoxml/$(@:repoxml-%=%)/repositories.xml
 
 overlay: $(foreach __item,$(overlay_list),overlay-$(word 2,$(subst :, ,$(__item))))
 	@echo "$(@) <- $(^)"
