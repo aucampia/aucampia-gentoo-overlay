@@ -28,6 +28,7 @@ overlay_list= \
 	layman:last-hope \
 	layman:godin \
 	layman:squeezebox \
+	layman:wichtounet \
 	gpo.zugaina.org:bgo-overlay \
 
 
@@ -95,7 +96,7 @@ overlay-%:
 	overlay_url=$$( xmllint --xpath "/repositories/repo[name='$${overlay_name}']/source[1]/text()" $(<) 2>/dev/null | head -1 ); \
 	echo "$${overlay_name}=$${overlay_type}=$${overlay_url}"; \
 	mkdir -p upstream/overlay/$${overlay_name}/; \
-	case $${overlay_url//:*} in \
+	case $${overlay_type} in \
 		(rsync) rsync -avz $${overlay_url}/ upstream/overlay/$${overlay_name}/;; \
 		(git) \
 			if [ -d "upstream/overlay/$${overlay_name}/.git" ]; \
