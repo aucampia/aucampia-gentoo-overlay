@@ -170,6 +170,12 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 ** link:http://www.gentoo.org/proj/en/java/java-devel.xml[ Gentoo Java Packaging Guide ]
 ** link:http://devmanual.gentoo.org/[ Gentoo Development Guide ] / link:https://devmanual.gentoo.org/eclass-reference/index.html[ Eclass Reference ] / link:https://devmanual.gentoo.org/eclass-reference/java-pkg-2.eclass/index.html[ +JAVA-PKG-2+ ]
 **** link:file:///usr/portage/eclass/java-pkg-2.eclass[]
+** link:http://devmanual.gentoo.org/[ Gentoo Development Guide ] / link:https://devmanual.gentoo.org/eclass-reference/index.html[ Eclass Reference ] / link:https://devmanual.gentoo.org/eclass-reference/java-utils-2.eclass/index.html[ +JAVA-UTILS-2+ ]
+**** link:file:///usr/portage/eclass/java-utils-2.eclass[]
+
+=== Go
+
+http://golang.org/doc/code.html#GOPATH
 
 === GNU Autotools
 
