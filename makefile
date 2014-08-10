@@ -72,38 +72,38 @@ help:
 repoxml: $(foreach __item,$(repoxml_list),repoxml-$(__item))
 	@echo "$(@) <- $(^)"
 
-$(foreach __item,$(repoxml_list),$(info upstream/repoxml/$(__item)/repositories.xml: repoxml-$(__item)))
-$(foreach __item,$(repoxml_list),$(eval upstream/repoxml/$(__item)/repositories.xml: repoxml-$(__item)))
+$(foreach __item,$(repoxml_list),$(info ../aucampia-gentoo-overlay.misc/upstream/repoxml/$(__item)/repositories.xml: repoxml-$(__item)))
+$(foreach __item,$(repoxml_list),$(eval ../aucampia-gentoo-overlay.misc/upstream/repoxml/$(__item)/repositories.xml: repoxml-$(__item)))
 
 repoxml-%:
 	@echo "$(@) <- $(^)"
 	@echo "repoxml_$(@:repoxml-%=%)_url=$(repoxml_$(@:repoxml-%=%)_url)"
-	mkdir -p upstream/repoxml/$(@:repoxml-%=%)
-	curl --insecure -L $(repoxml_$(@:repoxml-%=%)_url) -o upstream/repoxml/$(@:repoxml-%=%)/repositories.xml
+	mkdir -p ../aucampia-gentoo-overlay.misc/upstream/repoxml/$(@:repoxml-%=%)
+	curl --insecure -L $(repoxml_$(@:repoxml-%=%)_url) -o ../aucampia-gentoo-overlay.misc/upstream/repoxml/$(@:repoxml-%=%)/repositories.xml
 
 overlay: $(foreach __item,$(overlay_list),overlay-$(word 2,$(subst :, ,$(__item))))
 	@echo "$(@) <- $(^)"
 
-$(foreach __item,$(overlay_list),$(info overlay-$(word 2,$(subst :, ,$(__item))): upstream/repoxml/$(word 1,$(subst :, ,$(__item)))/repositories.xml))
-$(foreach __item,$(overlay_list),$(eval overlay-$(word 2,$(subst :, ,$(__item))): upstream/repoxml/$(word 1,$(subst :, ,$(__item)))/repositories.xml))
+$(foreach __item,$(overlay_list),$(info overlay-$(word 2,$(subst :, ,$(__item))): ../aucampia-gentoo-overlay.misc/upstream/repoxml/$(word 1,$(subst :, ,$(__item)))/repositories.xml))
+$(foreach __item,$(overlay_list),$(eval overlay-$(word 2,$(subst :, ,$(__item))): ../aucampia-gentoo-overlay.misc/upstream/repoxml/$(word 1,$(subst :, ,$(__item)))/repositories.xml))
 
 overlay-%:
 	@echo "$(@) <- $(^)"
-	@echo "dest: upstream/overlay/$(@:overlay-%=%)/"
+	@echo "dest: ../aucampia-gentoo-overlay.misc/upstream/overlay/$(@:overlay-%=%)/"
 	@echo "overlay_$(@:overlay-%=%)_url=$(overlay_$(@:overlay-%=%)_url)"
 	@overlay_name=$(@:overlay-%=%); \
 	overlay_type=$$( xmllint --xpath "/repositories/repo[name='$${overlay_name}']/source[1]/@type" $(<) 2>/dev/null | head -1 | sed '1aecho $$type'| bash ); \
 	overlay_url=$$( xmllint --xpath "/repositories/repo[name='$${overlay_name}']/source[1]/text()" $(<) 2>/dev/null | head -1 ); \
 	echo "$${overlay_name}=$${overlay_type}=$${overlay_url}"; \
-	mkdir -p upstream/overlay/$${overlay_name}/; \
+	mkdir -p ../aucampia-gentoo-overlay.misc/upstream/overlay/$${overlay_name}/; \
 	case $${overlay_type} in \
-		(rsync) rsync -avz $${overlay_url}/ upstream/overlay/$${overlay_name}/;; \
+		(rsync) rsync -avz $${overlay_url}/ ../aucampia-gentoo-overlay.misc/upstream/overlay/$${overlay_name}/;; \
 		(git) \
-			if [ -d "upstream/overlay/$${overlay_name}/.git" ]; \
+			if [ -d "../aucampia-gentoo-overlay.misc/upstream/overlay/$${overlay_name}/.git" ]; \
 			then \
-				git -C upstream/overlay/$${overlay_name}/ pull; \
+				git -C ../aucampia-gentoo-overlay.misc/upstream/overlay/$${overlay_name}/ pull; \
 			else \
-				git clone $${overlay_url}/ upstream/overlay/$${overlay_name}/; \
+				git clone $${overlay_url}/ ../aucampia-gentoo-overlay.misc/upstream/overlay/$${overlay_name}/; \
 			fi;; \
 	esac
 
@@ -120,7 +120,7 @@ external-$(1):
 	@echo "external=$$(@:external-%=%)"
 	@echo "overlay=$$(<:overlay-%=%)"
 	mkdir -p $$(dir $$(@:external-%=%))
-	rsync -v -c -rptgo upstream/overlay/$$(<:overlay-%=%)/$$(@:external-%=%) $$(dir $$(@:external-%=%))
+	rsync -v -c -rptgo ../aucampia-gentoo-overlay.misc/upstream/overlay/$$(<:overlay-%=%)/$$(@:external-%=%) $$(dir $$(@:external-%=%))
 endef
 
 $(foreach __item,$(external_list),$(info $(call external_template,$(word 2,$(subst :, ,$(__item))))))
