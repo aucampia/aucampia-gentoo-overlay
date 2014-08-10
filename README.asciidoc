@@ -125,19 +125,24 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 *** link:http://devmanual.gentoo.org/ebuild-writing/use-conditional-code/index.html[ USE Flag Conditional Code ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/users-and-groups/index.html[ Users and Groups ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/variables/index.html[ Variables ]
+*** link:http://devmanual.gentoo.org/ebuild-writing/functions/index.html[ Ebuild Functions ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/misc-files/index.html[ Miscellaneous Files ]
 **** link:http://devmanual.gentoo.org/ebuild-writing/misc-files/metadata/index.html[ Package and Category +metadata.xml+ ]
 **** link:http://devmanual.gentoo.org/ebuild-writing/misc-files/changelog/index.html[ ChangeLog ]
 **** link:http://devmanual.gentoo.org/ebuild-writing/misc-files/patches/index.html[ Patches ]
 ** link:https://devmanual.gentoo.org/eclass-reference/index.html[ Eclass Reference ]
-*** link:https://devmanual.gentoo.org/eclass-reference/versionator.eclass/index.html[ +VERSIONATOR+ ]
-**** link:file:///usr/portage/eclass/versionator.eclass[]
-*** link:https://devmanual.gentoo.org/eclass-reference/vala.eclass/index.html[ +VALA+ ]
-**** link:file:///usr/portage/eclass/vala.eclass[]
-*** link:https://devmanual.gentoo.org/eclass-reference/git-r3.eclass/index.html[ +GIT-R3+ ]
-**** link:file:///usr/portage/eclass/git-r3.eclass[]
 *** link:https://devmanual.gentoo.org/eclass-reference/eutils.eclass/index.html[ +EUTILS+ ]
 **** link:file:///usr/portage/eclass/eutils.eclass[]
+*** link:https://devmanual.gentoo.org/eclass-reference/git-r3.eclass/index.html[ +GIT-R3+ ]
+**** link:file:///usr/portage/eclass/git-r3.eclass[]
+*** link:http://devmanual.gentoo.org/eclass-reference/subversion.eclass/index.html[ +SUBVERSION+ ]
+**** link:file:///usr/portage/eclass/subversion.eclass[]
+*** link:https://devmanual.gentoo.org/eclass-reference/vala.eclass/index.html[ +VALA+ ]
+**** link:file:///usr/portage/eclass/vala.eclass[]
+*** link:https://devmanual.gentoo.org/eclass-reference/versionator.eclass/index.html[ +VERSIONATOR+ ]
+**** link:file:///usr/portage/eclass/versionator.eclass[]
+** link:http://devmanual.gentoo.org/function-reference/index.html[ Function Reference ]
+*** link:http://devmanual.gentoo.org/function-reference/install-functions/index.html[ Install Functions Reference ]
 ** link:http://devmanual.gentoo.org/tools-reference/index.html[ Tools Reference ]
 *** link:http://devmanual.gentoo.org/tools-reference/echangelog/index.html[ echangelog -- ChangeLog Generation ]
 *** link:http://devmanual.gentoo.org/tools-reference/ekeyword/index.html[ ekeyword -- Keywording ]
@@ -259,15 +264,15 @@ sed -n 's/^.*<source[^>]\+>.*\(github.com\/.*\).git<\/source>.*$/\1/gp' reposito
 ----
 
 ----
-find . \( -name tmp -o -name .git \) -prune -o -name '*.ebuild' -type f -print
+find . \( -name .git \) -prune -o -name '*.ebuild' -type f -print
 ----
 
 ----
-find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name '*.patch' -type f -print
-find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name 'metadata.xml' -type f -print
-find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name '*.ebuild' -type f -print
-find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name '*.asciidoc' -type f -print
-grep -r --include='*.ebuild' --exclude-dir=tmp --exclude-dir=upstream --exclude-dir=.git --exclude-dir=distfiles inherit .
+find . \( -name .git \) -prune -o -name '*.patch' -type f -print
+find . \( -name .git \) -prune -o -name 'metadata.xml' -type f -print
+find . \( -name .git \) -prune -o -name '*.ebuild' -type f -print
+find . \( -name .git \) -prune -o -name '*.asciidoc' -type f -print
+grep -r --include='*.ebuild' --exclude-dir=.git --exclude-dir=distfiles inherit .
 ----
 
 ----
@@ -297,12 +302,12 @@ eix --in-overlay aucampia-gentoo-overlay
 ----
 
 ----
-find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name '*.ebuild' -type f -printf '%h\n' | sort | uniq
-find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name 'ChangeLog' -type f -print | sort
+find . \( -name .git \) -prune -o -name '*.ebuild' -type f -printf '%h\n' | sort | uniq
+find . \( -name .git \) -prune -o -name 'ChangeLog' -type f -print | sort
 ECHANGELOG_USER="Iwan Aucamp <aucampia@gmail.com>" echangelog "..."
-find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name 'metadata.xml' -type f -print | xargs -I {} xmllint --valid {} > /dev/null
-find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name '*.ebuild' -type f -print | xargs -I{} ebuild {} manifest
-#find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name 'Manifest' -type f -print | xargs -I{} sed -i '/^MISC README.asciidoc/d' {}
+find . \( -name .git \) -prune -o -name 'metadata.xml' -type f -print | xargs -I {} xmllint --valid {} > /dev/null
+find . \( -name .git \) -prune -o -name '*.ebuild' -type f -print | xargs -I{} ebuild {} manifest
+#find . \( -name .git \) -prune -o -name 'Manifest' -type f -print | xargs -I{} sed -i '/^MISC README.asciidoc/d' {}
 sed -i '/^MISC README/d' */*/Manifest
 repoman -p -d full
 
