@@ -306,8 +306,8 @@ find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name '*.ebuild
 sed -i '/^MISC README/d' */*/Manifest
 repoman -p -d full
 
-repoman -d --echangelog=force -p -m "Fix manifest" commit dev-java/
-repoman -d --echangelog=force --force -m "Fix manifest" commit dev-java/
+repoman -d --echangelog=force -p -m "..." commit
+repoman -d --echangelog=force -m "..." commit
 ----
 
 ----
