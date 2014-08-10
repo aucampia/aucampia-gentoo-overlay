@@ -1,0 +1,4 @@
+*tmsu-bin-0.4.2 (10 Aug 2014)
+
+  10 Aug 2014;  <iwana@gentoo.org> +metadata.xml, +tmsu-bin-0.4.2.ebuild:
+  Add sys-fs/tmsu-bin-0.4.2

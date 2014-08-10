@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<natural-name>TMSU</natural-name>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		TMSU is a tool for tagging your files. It provides a simple command-line tool for applying tags and a virtual filesystem so that you can get a tag-based view of your files from within any other program.
+		TMSU does not alter your files in any way: they remain unchanged on disk, or on the network, wherever you put them. TMSU maintains its own database and you simply gain an additional view, which you can mount, based upon the tags you set up. The only commitment required is your time and there's absolutely no lock-in.
+	</longdescription>
+	<use>
+		<flag name="zsh-completion">Enable <pkg>app-shells/zsh</pkg> completion support</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<email>paul.ruane@oniony.com</email>
+			<name>Paul Ruane</name>
+			<description>Creator and current maintainer.</description>
+		</maintainer>
+		<changelog>https://bitbucket.org/oniony/tmsu#markdown-header-release-notes</changelog>
+		<doc lang="en">https://bitbucket.org/oniony/tmsu/wiki/Home</doc>
+		<bugs-to>https://bitbucket.org/oniony/tmsu/issues</bugs-to>
+		<remote-id type="bitbucket">oniony/tmsu</remote-id>
+	</upstream>
+</pkgmetadata>
+
