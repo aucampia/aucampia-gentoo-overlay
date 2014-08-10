@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<natural-name>Tagsistant</natural-name>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		Tagsistant is a semantic filesystem for Linux and BSD kernels. Its tag based method to organize files let's you quickly search and find it. It's able to reason on tags, it allows the creation of external plugins to enhance its behavior and its Free Software!
+	</longdescription>
+	<use>
+		<flag name="libextractor">Use <pkg>media-libs/libextract</pkg> to gather files' metadata</flag>
+		<flag name="mysql">Use <pkg>dev-db/mysql</pkg> as backend.</flag>
+		<flag name="sqlite">Use <pkg>dev-db/sqlite</pkg> as backend</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<email>tx0@strumentiresistenti.org</email>
+			<name>Tx0</name>
+			<description>Creator and current maintainer.</description>
+		</maintainer>
+		<changelog>http://svn.gna.org/svn/tagfs/trunk/ChangeLog</changelog>
+		<doc lang="en">http://www.tagsistant.net/documents-about-tagsistant/31-0-8-manual</doc>
+		<bugs-to>http://www.tagsistant.net/kunena/index</bugs-to>
+	</upstream>
+</pkgmetadata>
+
