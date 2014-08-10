@@ -29,6 +29,7 @@ overlay_list= \
 	layman:godin \
 	layman:squeezebox \
 	layman:wichtounet \
+	layman:kork \
 	gpo.zugaina.org:bgo-overlay \
 
 
