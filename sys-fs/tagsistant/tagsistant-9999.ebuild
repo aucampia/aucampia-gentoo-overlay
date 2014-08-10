@@ -6,11 +6,11 @@ EAPI=5
 
 DESCRIPTION="A semantic filesystem with."
 HOMEPAGE="http://www.tagsistant.net/"
-SRC_URI="http://www.tagsistant.net/download/tagsistant-0-8-tar-gz/finish/6-tagsistant-0-8/12-tagsistant-0-8/0 -> ${P}.tar.gz"
+ESVN_REPO_URI="http://svn.gna.org/svn/tagfs/trunk"
+inherit subversion
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="libextractor mysql +sqlite"
 REQUIRED_USE="|| ( mysql sqlite )"
 

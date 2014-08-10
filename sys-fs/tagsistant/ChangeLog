@@ -1,3 +1,9 @@
+*tagsistant-9999 (10 Aug 2014)
+
+  10 Aug 2014;  <iwana@gentoo.org> +tagsistant-9999.ebuild,
+  tagsistant-0.8.ebuild:
+  Add sys-fs/tagsistant-9999
+
 *tagsistant-0.8 (10 Aug 2014)
 
   10 Aug 2014;  <iwana@gentoo.org> +metadata.xml, +tagsistant-0.8.ebuild:
