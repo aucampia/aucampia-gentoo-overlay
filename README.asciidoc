@@ -116,11 +116,13 @@ diff -u /etc/layman/layman.cfg.20140613162703.bak /etc/layman/layman.cfg
 * link:http://devmanual.gentoo.org/[ Gentoo Development Guide ]
 ** link:http://devmanual.gentoo.org/quickstart/[ Quickstart Ebuild Guide ]
 ** link:http://devmanual.gentoo.org/general-concepts/index.html[ General Concepts ]
+*** link:http://devmanual.gentoo.org/general-concepts/dependencies/index.html[ Dependencies ]
 *** link:http://devmanual.gentoo.org/general-concepts/filesystem/index.html[ Filesystem ]
 *** link:http://devmanual.gentoo.org/general-concepts/overlay/index.html[ Overlay ]
 *** link:http://devmanual.gentoo.org/general-concepts/use-flags/index.html[ USE Flags ]
 ** link:http://devmanual.gentoo.org/ebuild-writing/index.html[ Ebuild Writing ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/eapi/index.html[ EAPI Usage and Description ]
+*** link:http://devmanual.gentoo.org/ebuild-writing/use-conditional-code/index.html[ USE Flag Conditional Code ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/users-and-groups/index.html[ Users and Groups ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/variables/index.html[ Variables ]
 *** link:http://devmanual.gentoo.org/ebuild-writing/misc-files/index.html[ Miscellaneous Files ]
@@ -300,8 +302,12 @@ find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name 'ChangeLo
 ECHANGELOG_USER="Iwan Aucamp <aucampia@gmail.com>" echangelog "..."
 find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name 'metadata.xml' -type f -print | xargs -I {} xmllint --valid {} > /dev/null
 find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name '*.ebuild' -type f -print | xargs -I{} ebuild {} manifest
+#find . \( -name tmp -o -name upstream -o -name .git \) -prune -o -name 'Manifest' -type f -print | xargs -I{} sed -i '/^MISC README.asciidoc/d' {}
 sed -i '/^MISC README/d' */*/Manifest
 repoman -p -d full
+
+repoman -d --echangelog=force -p -m "Fix manifest" commit dev-java/
+repoman -d --echangelog=force --force -m "Fix manifest" commit dev-java/
 ----
 
 ----
@@ -340,6 +346,16 @@ app-portage/gentoolkit-dev
 app-portage/overlay-utils
 www-client/pybugz
 app-doc/devmanual
+----
+
+----
+PORTDIR_OVERLAY="`pwd`" sudo -E emerge -vp sys-fs/tagsistant
+----
+
+----
+grep -e qt4 -e gtk /usr/portage/profiles/use.desc
+grep -e mysql -e sqlite /usr/portage/profiles/use.desc
+euse -g -i
 ----
 
 ----
