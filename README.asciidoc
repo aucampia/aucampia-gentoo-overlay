@@ -355,6 +355,7 @@ app-doc/devmanual
 
 ----
 PORTDIR_OVERLAY="`pwd`" sudo -E emerge -vp sys-fs/tagsistant
+PORTDIR_OVERLAY="`pwd`" sudo -E emerge -vp dev-ruby/asciidoctor
 ----
 
 ----
@@ -377,3 +378,7 @@ http://git.overlays.gentoo.org/gitweb/?p=proj/java-config.git;a=blob;f=src/launc
 * link:file:///usr/portage/profiles/arch.list[]
 * link:file:////usr/portage/profiles/use.desc[]
 
+----
+ebuild asciidoctor-1.5.0-r1.ebuild clean compile
+ebuild --debug asciidoctor-1.5.0-r1.ebuild install >install.debug 2>&1
+----
