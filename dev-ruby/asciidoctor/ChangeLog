@@ -1,4 +1,0 @@
-*asciidoctor-1.5.0-r1 (14 Aug 2014)
-
-  14 Aug 2014;  <iwana@gentoo.org> +asciidoctor-1.5.0-r1.ebuild, +metadata.xml:
-  Add dev-ruby/asciidoctor-1.5.0-r1
