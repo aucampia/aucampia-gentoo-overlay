@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		This power manager for the Xfce desktop enables laptop users to set up a power profile for two different modes "on battery power" and "on ac power" while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue..
+    
+		It features battery monitoring, cpu frequency settings, monitoring of DPMS settings, suspend/hibernate, LCD brightness control, sleep and power switches control, and more.
+	</longdescription>
+	<use>
+		<flag name='udisks'>Pull in <pkg>sys-fs/udisks</pkg> for spindown support</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<email>jannis@xfce.org</email>
+			<name>Jannis Pohlmann</name>
+			<description>Core developer</description>
+		</maintainer>
+		<changelog>http://git.xfce.org/xfce/xfce4-power-manager/log/</changelog>
+		<bugs-to>https://bugzilla.xfce.org/</bugs-to>
+	</upstream>
+</pkgmetadata>
