@@ -1,6 +1,0 @@
-*xfce4-power-manager-1.3.1 (18 Aug 2014)
-
-  18 Aug 2014;  <iwana@gentoo.org> +metadata.xml,
-  +xfce4-power-manager-1.3.1.ebuild:
-  add xfce-extra/xfce4-power-manager-1.3.1 - contains a patch to use pkexec for
-  suspend instead of nasty sudoers hax
