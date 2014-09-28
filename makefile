@@ -30,6 +30,8 @@ overlay_list= \
 	layman:squeezebox \
 	layman:wichtounet \
 	layman:kork \
+	layman:eroen \
+	layman:ixit \
 	gpo.zugaina.org:bgo-overlay \
 
 
