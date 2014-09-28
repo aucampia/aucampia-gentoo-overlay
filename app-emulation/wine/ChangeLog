@@ -1,0 +1,4 @@
+*wine-1.7.27 (28 Sep 2014)
+
+  28 Sep 2014;  <iwana@gentoo.org> +metadata.xml, +wine-1.7.27.ebuild:
+  add app-emulation/wine-1.7.27
