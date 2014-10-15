@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">
+		The Heirloom Packaging Tools are Linux ports of the SVR4 application packaging tools, as released by Sun as part of OpenSolaris.
+	</longdescription>
+	<upstream>
+		<maintainer status="active">
+			<email>gunnarr@acm.org</email>
+			<name>Gunnar Ritter</name>
+			<description>Creator and current maintainer.</description>
+		</maintainer>
+		<changelog>http://heirloom.cvs.sourceforge.net/heirloom/heirloom-pkgtools/CHANGES?view=markup</changelog>
+		<doc lang="en">http://heirloom.sourceforge.net/pkgtools.html</doc>
+		<bugs-to>http://sourceforge.net/projects/heirloom/support?source=navbar</bugs-to>
+		<remote-id type='sourceforge'>heirloom</remote-id>
+	</upstream>
+</pkgmetadata>

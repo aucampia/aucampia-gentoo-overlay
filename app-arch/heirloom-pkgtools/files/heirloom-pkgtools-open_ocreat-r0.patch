@@ -1,0 +1,13 @@
+# mode is mandatory for O_CREAT
+diff -u -r heirloom-pkgtools-070227.org/libpkg/pkgtrans.c heirloom-pkgtools-070227/libpkg/pkgtrans.c
+--- heirloom-pkgtools-070227.org/libpkg/pkgtrans.c	2014-10-14 17:45:40.324307155 +0200
++++ heirloom-pkgtools-070227/libpkg/pkgtrans.c	2014-10-14 17:51:53.433208135 +0200
+@@ -1010,7 +1010,7 @@
+ 	 */
+ 	strcpy(tmp_file, template);
+ 	if (close(mkstemp(tmp_file)) < 0 ||	/* temporary file name */
+-			(list_fd = open(tmp_file, O_RDWR | O_CREAT)) == -1) {
++			(list_fd = open(tmp_file, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH )) == -1) {
+ 		progerr(pkg_gt(ERR_TRANSFER));
+ 		logerr(pkg_gt(MSG_NOTMPFIL));
+ 		return (1);

@@ -1,0 +1,6 @@
+*heirloom-pkgtools-070227 (15 Oct 2014)
+
+  15 Oct 2014;  <iwana@gentoo.org>
+  +files/heirloom-pkgtools-open_ocreat-r0.patch,
+  +heirloom-pkgtools-070227.ebuild, +metadata.xml:
+  add app-arch/heirloom-pkgtools-070227
