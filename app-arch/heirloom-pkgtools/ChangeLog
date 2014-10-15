@@ -1,3 +1,8 @@
+*heirloom-pkgtools-999999 (15 Oct 2014)
+
+  15 Oct 2014;  <iwana@gentoo.org> +heirloom-pkgtools-999999.ebuild:
+  add app-arch/heirloom-pkgtools-999999 and unify ebuilds
+
 *heirloom-pkgtools-070227 (15 Oct 2014)
 
   15 Oct 2014;  <iwana@gentoo.org>
