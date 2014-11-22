@@ -1,3 +1,8 @@
+*wine-1.7.31 (22 Nov 2014)
+
+  22 Nov 2014;  <iwana@gentoo.org> +wine-1.7.31.ebuild:
+  add wine 1.7.31
+
 *wine-1.7.27 (28 Sep 2014)
 
   28 Sep 2014;  <iwana@gentoo.org> +metadata.xml, +wine-1.7.27.ebuild:
