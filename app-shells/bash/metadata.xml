@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<!-- /usr/portage/metadata/dtd/metadata.dtd -->
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en">The standard GNU Bourne again shell.</longdescription>
+	<use>
+		<flag name="net">Enable network support</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<email>chet.ramey@case.edu</email>
+			<name>Chet Ramey</name>
+			<description>...</description>
+		</maintainer>
+		<changelog>https://tiswww.case.edu/php/chet/bash/CHANGES</changelog>
+		<doc lang="en">http://wiki.turpial.org.ve/</doc>
+		<bugs-to>mailto:bug-bash@gnu.org</bugs-to>
+		<remote-id type='freecode'>gnubash</remote-id>
+	</upstream>
+</pkgmetadata>

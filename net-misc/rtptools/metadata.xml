@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer status="active">
+		<email>Iwan Aucamp</email>
+		<name>aucampia@gmail.com</name>
+		<description>Maintaining as needed or requested.</description>
+	</maintainer>
+	<longdescription lang="en"><pkg>net-misc/rtptools</pkg> consists of a number of small applications that can be used for processing RTP data.</longdescription>
+	<upstream>
+		<maintainer status="active">
+			<email>hgs@cs.columbia.edu</email>
+			<name>Henning Schulzrinne</name>
+			<description>Creator and current maintainer. Alias: hgs.</description>
+		</maintainer>
+		<changelog>http://www.cs.columbia.edu/irt/software/rtptools/download</changelog>
+		<doc lang="en">http://www.cs.columbia.edu/irt/software/rtptools</doc>
+		<bugs-to>http://www.cs.columbia.edu/irt/software/rtptools</bugs-to>
+	</upstream>
+</pkgmetadata>
